@@ -1,10 +1,10 @@
-import { RNCamera } from 'react-native-camera';
+import useCameraDevices from 'react-native-vision-camera'
 import React from 'react';
 import { Text, View } from 'react-native';
 
 const Camera = () => {
   
-  const newCameraPermission = await Camera.requestCameraPermission()
+  
   const devices = useCameraDevices()
   const device = devices.back
 
@@ -13,7 +13,6 @@ const Camera = () => {
     <Camera
       style={StyleSheet.absoluteFill}
       device={device}
-      isActive={true}
     />
   )
 }
