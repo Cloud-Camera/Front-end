@@ -1,4 +1,4 @@
-package com.nativecamera;
+package com.cloundcamera.android;
 
 import android.app.Application;
 import android.content.Context;
@@ -79,7 +79,7 @@ public class MainApplication extends Application implements ReactApplication {
          We use reflection here to pick up the class that initializes Flipper,
         since Flipper library is not available in release mode
         */
-        Class<?> aClass = Class.forName("com.nativecamera.ReactNativeFlipper");
+        Class<?> aClass = Class.forName("com.cloundcamera.android.ReactNativeFlipper");
         aClass
             .getMethod("initializeFlipper", Context.class, ReactInstanceManager.class)
             .invoke(null, context, reactInstanceManager);
